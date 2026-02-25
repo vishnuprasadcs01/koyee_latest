@@ -42,6 +42,7 @@
     <link href="./plugins/custom-icons/style.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
@@ -104,6 +105,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="alert alert-success d-none text-center"
+          role="alert"
+          id="success-message"
+        >
+          Thanks for getting in touch! We’ve received your message and we’ll be
+          in contact shortly.
         </div>
         <section
           class="services-hero d-flex align-items-center justify-content-center text-center"
@@ -367,6 +376,23 @@
           header.classList.remove("sticky");
         }
       }
+    </script>
+    <script>
+      $(document).ready(function () {
+        // 1. Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 2. Check if 'status' is 'success'
+        if (urlParams.get("status") === "success") {
+          // 3. Show the div and optionally auto-hide it after 5 seconds
+          $("#success-message").removeClass("d-none").hide().fadeIn(400);
+
+          // Optional: Auto-dismissal for better UX
+          setTimeout(function () {
+            $("#success-message").fadeOut(400);
+          }, 5000);
+        }
+      });
     </script>
   </body>
 </html>
