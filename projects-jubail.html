@@ -45,6 +45,49 @@
   </head>
 
   <body>
+    <div class="btn-lg fs-5 bg-light border-bottom py-1">
+      <div class="container-fluid d-flex justify-content-end">
+        <div class="dropdown" id="countrySwitcher">
+          <button
+            class="btn btn-sm dropdown-toggle border-0 d-flex align-items-center"
+            type="button"
+            id="currentCountry"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="flag me-2">🇸🇦</span>
+            <span class="label">KSA</span>
+          </button>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow-sm"
+            aria-labelledby="currentCountry"
+          >
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="#"
+                data-flag="🇸🇦"
+                data-name="KSA"
+              >
+                <span class="me-2">🇸🇦</span> KSA
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="#"
+                data-flag="🇶🇦"
+                data-name="Qatar"
+                data-link="https://www.koyeecontainerqa.com/"
+              >
+                <span class="me-2">🇶🇦</span> Qatar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="scroll_top_btn"><img src="./img/top_arrow.svg" alt="" /></div>
     <header>
       <div class="header_blue_bg">
@@ -575,5 +618,6 @@
         }
       }
     </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
