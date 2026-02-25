@@ -143,12 +143,14 @@
             <div class="contact-card">
               <h4 class="mb-4">Contact <strong>me</strong></h4>
 
-              <form>
+              <form action="forms/contact.php" method="post">
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control custom-input"
                     placeholder="Enter your name"
+                    name="name"
+                    required
                   />
                 </div>
 
@@ -157,6 +159,8 @@
                     type="email"
                     class="form-control custom-input"
                     placeholder="Enter your Email"
+                    name="email"
+                    required
                   />
                 </div>
 
@@ -165,6 +169,8 @@
                     type="text"
                     class="form-control custom-input"
                     placeholder="Enter your phone number"
+                    name="phone"
+                    required
                   />
                 </div>
 
@@ -174,6 +180,8 @@
                     class="form-control custom-input"
                     rows="4"
                     placeholder="Enquiry"
+                    name="message"
+                    required
                   ></textarea>
                 </div>
 
